@@ -1,4 +1,126 @@
 @charset "UTF-8";
-
+.box1 {
+  background: #76ff826b;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto;
+}
+.box2 {
+  background: #331aefd0;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.feedin {
+  animation-name: fadeInAnime;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+.feedout {
+  animation: fadeout 4s ease 4s 1 normal;
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.spin {
+  animation: spin 4s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.box2:hover {
+  background: #ff27e2c9;
+}
+.box3 {
+  background: #331aefd0;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto;
+  transition: 1s;
+}
+.spin--box:hover {
+  transform: rotate(360deg);
+}
+.upslide:hover {
+  transform: translate(0, -20%);
+}
+.rightslide:hover {
+  transform: translate(50%, 0);
+}
+.heightlong:hover {
+  height: 300px;
+}
+.widthlong:hover {
+  width: 500px;
+}
+.frame {
+  box-sizing: border-box;
+}
+.frame:hover {
+  border: 10px #00ffe5 solid;
+}
+.shadow:hover {
+  box-shadow: 8px 11px 10px 3px #06031ed0;
+}
+.circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: solid 10px #ecf1f2;
+  border-top: solid 10px #14ff4bcd;
+  animation: spin 1.1s linear infinite;
+}
+.cardlist {
+  width: 300px;
+  background: #ffffff;
+  outline: 1px solid #000000;
+  list-style: none;
+  padding: 20px;
+  transition: .5s;
+}
+.list {
+  display: flex;
+}
+.icon {
+  background-image: url(https://picsum.photos/id/1005/200/300);
+  height: 150px;
+  width:  150px;
+  padding: 20px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.cardlist p {
+  margin-top: 20px;
+}
+.cardlist:hover{
+  box-shadow: 0px 0px 10px 3px #424242d0;
+  z-index: 1;
+}
 /* カード内の画像は以下のURLを使用して下さい */
 /* https://picsum.photos/id/1005/200/300 */

@@ -1,1 +1,30 @@
 @charset "UTF-8";
+.balloon {
+  background-color: #fad296;
+  line-height: 16px;
+  padding: 20px;
+  width: 500px;
+  border-radius: 30px;
+  position: relative;
+  border: solid 5px #815a0a;
+  margin: 0 auto;
+}
+.balloon p {
+  font-size: 16px;
+}
+.balloon::before,
+.balloon::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  bottom: -20px;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+.balloon::before {
+  background-color: #815a0a;
+}
+.balloon::after {
+  bottom: -14px;
+  background-color: #fad296;
+}
